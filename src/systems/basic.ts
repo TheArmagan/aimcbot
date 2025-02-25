@@ -6,7 +6,7 @@ import similarity from "similarity";
 
 let ownerName: string | null = null;
 
-addSpeechTrigger(/sahibini ([^ ]+) olarak ayarla/i, (text, matchResponse) => {
+addSpeechTrigger(/(?:sahibini|sahibine) ([^ ]+) olarak ayarla/i, (text, matchResponse) => {
   let playerName = turkishToASCII(matchResponse[1]);
   executeOnBot(async (bot) => {
     ownerName = Object.values(bot.players).sort((a, b) => similarity(b.username, playerName) - similarity(a.username, playerName))[0].username;
@@ -44,4 +44,8 @@ addSpeechTrigger(/beni takip etme/i, () => {
     bot.pathfinder.setGoal(null);
     makeBotChat("Sahibimi takip etmeyi bıraktım");
   });
+});
+
+addSpeechTrigger(/intihar et|kendini kes|kendini oldur/i, () => {
+  process.exit(0);
 });
