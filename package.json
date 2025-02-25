@@ -10,7 +10,10 @@
   "author": "Kıraç Armağan Önal",
   "license": "GPL-3.0-only",
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/lodash": "^4.17.15",
     "@types/node": "^22.13.5",
+    "@types/similarity": "^1.2.3",
     "@types/ws": "^8.5.14",
     "ts-patch": "^3.3.0",
     "tsx": "^4.19.3",
@@ -18,8 +21,11 @@
     "typescript-transform-paths": "^3.5.3"
   },
   "dependencies": {
-    "hono": "^4.7.2",
+    "express": "^4.21.2",
+    "lodash": "^4.17.21",
     "mineflayer": "^4.26.0",
-    "ws": "^8.18.1"
+    "mineflayer-pathfinder": "^2.4.5",
+    "similarity": "^1.2.1",
+    "socket.io": "^4.8.1"
   }
 }

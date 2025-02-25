@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" class="detection-lang" placeholder="Detection Language" value="tr-TR">
+    <button class="start-btn">
+      Start
+    </button>
+    <br>
+    <input type="number" step="0.01" class="volume" value="0.5" name="volume" id="volume">
+    <label for="volume">Volume</label>
+    <br>
+    <div class="speak-result">
+
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
